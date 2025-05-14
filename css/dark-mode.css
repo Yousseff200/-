@@ -1,0 +1,160 @@
+[data-theme="dark"] {
+    --primary-color: #34495e;
+    --secondary-color: #2980b9;
+    --accent-color: #c0392b;
+    --text-color: #ecf0f1;
+    --background-color: #1a1a1a;
+    --card-background: #2c2c2c;
+    --border-color: #404040;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Header & Navigation */
+[data-theme="dark"] .logo a {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .nav-links a {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .dropbtn {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .dropdown-content {
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .dropdown-content a:hover {
+    background-color: var(--background-color);
+}
+
+/* Hero Section */
+[data-theme="dark"] .hero {
+    background: linear-gradient(135deg, #2c3e50, #2980b9);
+}
+
+[data-theme="dark"] .secondary-btn {
+    color: var(--text-color);
+    border-color: var(--secondary-color);
+}
+
+[data-theme="dark"] .secondary-btn:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* Memory Cards */
+[data-theme="dark"] .memory-card {
+    background-color: var(--card-background);
+}
+
+[data-theme="dark"] .memory-title {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .memory-date {
+    color: #bdc3c7;
+}
+
+[data-theme="dark"] .memory-description {
+    color: var(--text-color);
+}
+
+/* Forms & Inputs */
+[data-theme="dark"] input,
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+    color: #95a5a6;
+}
+
+[data-theme="dark"] .file-upload label {
+    background-color: var(--background-color);
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+
+/* Modals */
+[data-theme="dark"] .modal-content {
+    background-color: var(--card-background);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .close {
+    color: var(--text-color);
+}
+
+/* Buttons */
+[data-theme="dark"] .action-btn {
+    background-color: var(--card-background);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .view-btn {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .mobile-menu-btn {
+    color: var(--text-color);
+}
+
+/* Footer */
+[data-theme="dark"] footer {
+    background-color: var(--card-background);
+}
+
+[data-theme="dark"] .footer-section h3 {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .footer-section ul a {
+    color: #bdc3c7;
+}
+
+[data-theme="dark"] .footer-section ul a:hover {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .social-links a {
+    color: var(--text-color);
+}
+
+/* About & Privacy Pages */
+[data-theme="dark"] .about-section,
+[data-theme="dark"] .privacy-section {
+    background-color: var(--card-background);
+}
+
+[data-theme="dark"] .feature-card {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+[data-theme="dark"] .tech-section li {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .privacy-item {
+    background-color: var(--background-color);
+}
+
+[data-theme="dark"] .privacy-item h2 {
+    color: var(--text-color);
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+    [data-theme="dark"] .nav-links.active {
+        background-color: var(--card-background);
+        border-top: 1px solid var(--border-color);
+    }
+} 

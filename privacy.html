@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سياسة الخصوصية - سجل ذكرياتك</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fas fa-book-open"></i>
+                    سجل ذكرياتك
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">الرئيسية</a>
+                <a href="index.html#memories">ذكرياتي</a>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        المزيد
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="about.html">
+                            <i class="fas fa-info-circle"></i>
+                            حول التطبيق
+                        </a>
+                        <a href="privacy.html" class="active">
+                            <i class="fas fa-shield-alt"></i>
+                            سياسة الخصوصية
+                        </a>
+                    </div>
+                </div>
+                <button id="theme-toggle" aria-label="تبديل الوضع المظلم">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <button class="mobile-menu-btn" aria-label="القائمة">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <div class="privacy-section">
+            <h1>سياسة الخصوصية</h1>
+            <p class="privacy-intro">
+                نحن في "سجل ذكرياتك" نقدر خصوصية مستخدمينا ونلتزم بحماية بياناتهم الشخصية. 
+                تشرح هذه السياسة كيفية تعاملنا مع معلوماتك وكيفية حمايتها.
+            </p>
+
+            <div class="privacy-content">
+                <section class="privacy-item">
+                    <h2><i class="fas fa-database"></i> تخزين البيانات</h2>
+                    <div class="privacy-details">
+                        <h3>أين تُخزن بياناتي؟</h3>
+                        <p>
+                            جميع ذكرياتك (الصور، الفيديوهات، الملفات الصوتية، ومستندات PDF) يتم تخزينها محلياً على جهازك
+                            باستخدام تقنية IndexedDB. لا يتم رفع أي من هذه البيانات إلى خوادمنا أو مشاركتها مع أي طرف ثالث.
+                        </p>
+                        
+                        <h3>ما هي البيانات التي نخزنها؟</h3>
+                        <ul>
+                            <li>الملفات التي تقوم بتحميلها (صور، فيديو، صوت، PDF)</li>
+                            <li>العناوين والأوصاف التي تضيفها لذكرياتك</li>
+                            <li>تواريخ إضافة الذكريات</li>
+                            <li>تفضيلات المظهر (الوضع الليلي/النهاري)</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="privacy-item">
+                    <h2><i class="fas fa-shield-alt"></i> حماية البيانات</h2>
+                    <div class="privacy-details">
+                        <h3>كيف نحمي بياناتك؟</h3>
+                        <ul>
+                            <li>تخزين محلي آمن على جهازك الشخصي فقط</li>
+                            <li>عدم مشاركة أي بيانات مع أطراف خارجية</li>
+                            <li>عدم جمع أي معلومات تعريفية شخصية</li>
+                            <li>عدم استخدام ملفات تعريف الارتباط التتبعية</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="privacy-item">
+                    <h2><i class="fas fa-cookie"></i> ملفات تعريف الارتباط</h2>
+                    <div class="privacy-details">
+                        <p>
+                            نستخدم ملف تعريف ارتباط واحد فقط لحفظ تفضيلاتك للمظهر (الوضع الليلي/النهاري).
+                            لا نستخدم أي ملفات تعريف ارتباط إضافية للتتبع أو التحليلات.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="privacy-item">
+                    <h2><i class="fas fa-user-shield"></i> حقوقك</h2>
+                    <div class="privacy-details">
+                        <h3>ما هي حقوقك؟</h3>
+                        <ul>
+                            <li>الوصول الكامل لجميع بياناتك المخزنة محلياً</li>
+                            <li>تعديل أو حذف ذكرياتك في أي وقت</li>
+                            <li>تحميل نسخة من ذكرياتك</li>
+                            <li>حذف جميع بياناتك بشكل نهائي</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="privacy-item">
+                    <h2><i class="fas fa-mobile-alt"></i> استخدام التطبيق</h2>
+                    <div class="privacy-details">
+                        <h3>كيف يمكنني التحكم في بياناتي؟</h3>
+                        <ul>
+                            <li>يمكنك حذف أي ذكرى في أي وقت</li>
+                            <li>يمكنك تصدير ذكرياتك وتحميلها على جهازك</li>
+                            <li>يمكنك مسح جميع البيانات المخزنة محلياً</li>
+                            <li>يمكنك التحكم في إعدادات الخصوصية من خلال متصفحك</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="privacy-item">
+                    <h2><i class="fas fa-envelope"></i> تواصل معنا</h2>
+                    <div class="privacy-details">
+                        <p>
+                            إذا كان لديك أي استفسارات حول سياسة الخصوصية أو كيفية تعاملنا مع بياناتك،
+                            يمكنك التواصل معنا عبر:
+                        </p>
+                        <div class="contact-info">
+                            <a href="mailto:youssefseliman20@gmail.com" class="contact-link">
+                                <i class="fas fa-envelope"></i>
+                                youssefseliman20@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="privacy-item">
+                    <h2><i class="fas fa-clock"></i> تحديث السياسة</h2>
+                    <div class="privacy-details">
+                        <p>
+                            قد نقوم بتحديث سياسة الخصوصية من وقت لآخر. سيتم نشر أي تغييرات على هذه الصفحة
+                            وسيتم إعلامك بالتغييرات الجوهرية عند استخدام التطبيق.
+                        </p>
+                        <p class="update-date">
+                            آخر تحديث: 1 مارس 2024
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="index.html#memories">ذكرياتي</a></li>
+                    <li><a href="about.html">حول التطبيق</a></li>
+                    <li><a href="privacy.html">سياسة الخصوصية</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>تواصل معنا</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>جميع الحقوق محفوظة &copy; 2024</p>
+        </div>
+    </footer>
+
+    <script src="js/dark-mode.js"></script>
+</body>
+</html> 

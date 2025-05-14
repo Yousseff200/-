@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سجل ذكرياتك</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fas fa-book-open"></i>
+                    سجل ذكرياتك
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="active">الرئيسية</a>
+                <a href="#memories">ذكرياتي</a>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        المزيد
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="about.html">
+                            <i class="fas fa-info-circle"></i>
+                            حول التطبيق
+                        </a>
+                        <a href="privacy.html">
+                            <i class="fas fa-shield-alt"></i>
+                            سياسة الخصوصية
+                        </a>
+                    </div>
+                </div>
+                <button id="theme-toggle" aria-label="تبديل الوضع المظلم">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <button class="mobile-menu-btn" aria-label="القائمة">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>احفظ ذكرياتك الثمينة</h1>
+            <p>مكان آمن لتخزين ومشاركة لحظاتك الخاصة</p>
+            <div class="hero-buttons">
+                <button class="add-memory-btn" onclick="openAddMemoryModal()">
+                    <i class="fas fa-plus"></i>
+                    أضف ذكرى جديدة
+                </button>
+                <a href="#memories" class="secondary-btn">
+                    <i class="fas fa-images"></i>
+                    استعرض ذكرياتك
+                </a>
+            </div>
+            <div class="features-preview">
+                <div class="feature">
+                    <i class="fas fa-image"></i>
+                    <span>صور</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-video"></i>
+                    <span>فيديو</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-music"></i>
+                    <span>صوت</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-file-pdf"></i>
+                    <span>PDF</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Memories Grid Section -->
+        <section id="memories" class="memories-grid">
+            <div class="section-header">
+                <h2>ذكرياتك</h2>
+                <div class="view-options">
+                    <button class="view-btn active" data-view="grid">
+                        <i class="fas fa-th"></i>
+                    </button>
+                    <button class="view-btn" data-view="list">
+                        <i class="fas fa-list"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="filters">
+                <div class="search-box">
+                    <input type="text" id="search" placeholder="ابحث في ذكرياتك...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="filter-options">
+                    <select id="type-filter">
+                        <option value="all">كل الأنواع</option>
+                        <option value="image">صور</option>
+                        <option value="video">فيديو</option>
+                        <option value="audio">صوت</option>
+                        <option value="pdf">PDF</option>
+                    </select>
+                    <input type="date" id="date-filter">
+                    <button id="sort-btn">
+                        <i class="fas fa-sort"></i>
+                        ترتيب
+                    </button>
+                </div>
+            </div>
+            <div id="memories-container" class="memories-container grid-view">
+                <!-- Memories will be added here dynamically -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Add Memory Modal -->
+    <div id="add-memory-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>إضافة ذكرى جديدة</h2>
+                <span class="close">&times;</span>
+            </div>
+            <form id="add-memory-form">
+                <div class="form-group">
+                    <label for="memory-title">عنوان الذكرى</label>
+                    <input type="text" id="memory-title" placeholder="أدخل عنواناً للذكرى" required>
+                </div>
+                <div class="form-group">
+                    <label for="memory-description">وصف الذكرى</label>
+                    <textarea id="memory-description" placeholder="أضف وصفاً للذكرى"></textarea>
+                </div>
+                <div class="file-upload">
+                    <input type="file" id="memory-file" accept="image/*,video/*,audio/*,.pdf" required>
+                    <label for="memory-file">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <span>اختر ملفاً</span>
+                        <small>يدعم: الصور، الفيديو، الصوت، PDF</small>
+                    </label>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="cancel-btn" onclick="closeModal('add-memory-modal')">إلغاء</button>
+                    <button type="submit" class="submit-btn">حفظ الذكرى</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- View Memory Modal -->
+    <div id="view-memory-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>عرض الذكرى</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div id="memory-details"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="#memories">ذكرياتي</a></li>
+                    <li><a href="about.html">حول التطبيق</a></li>
+                    <li><a href="privacy.html">سياسة الخصوصية</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>تواصل معنا</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>جميع الحقوق محفوظة &copy; 2024</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/dark-mode.js"></script>
+</body>
+</html> 
